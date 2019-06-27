@@ -1,3 +1,4 @@
+// Exercise 1 Loaded Die
 function makeLoadedDie() {
   const list = [5, 4, 6, 1, 6, 4, 2, 3, 3, 5];
   let index = -1;
@@ -14,6 +15,27 @@ console.log(rollLoadedDie());  // 5
 console.log(rollLoadedDie());  // 4
 console.log(rollLoadedDie());  // 6
 
+// Exercise 2 Countdown
+const countdownGenerator = function (x) {
+  return function() {
+    if (x < 0) {
+      console.log("Rockets already gone, bub!");
+    } else if (x === 0) {
+      console.log("Blast Off!");
+    } else {
+      console.log(`T-minus ${x}...`);
+    }
+    x--;
+  }
+};
+
+const countdown = countdownGenerator(3);
+countdown(); // T-minus 3...
+countdown(); // T-minus 2...
+countdown(); // T-minus 1...
+countdown(); // Blast Off!
+countdown(); // Rockets already gone, bub!
+countdown(); // Rockets already gone, bub!
 
 
 // // Examples
